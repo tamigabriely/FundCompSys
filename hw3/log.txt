@@ -1,0 +1,51 @@
+Log of running my code with the different lambda and ts from parts a-d
+a. 
+q = 9.241503131524007
+w = 10.14956158663883
+ro = 0.9080584551148227
+tQ = 0.16047120701680298
+tW = 0.17412114533441425
+
+b.
+q = 2.955030411805763
+w = 3.7226044471034
+ro = 0.767574035297637
+tQ = 0.028806871292658468
+tW = 0.0398345334774394
+
+c.
+q = 24.629169899146625
+w = 25.59868114817688
+ro = 0.9695112490302549
+tQ = 0.2921136030755501
+tW = 0.3068224192646413
+
+d.
+q = 8606.251259397039
+w = 8607.251259397039
+ro = 1.0
+tQ = -22.153167969299876
+tW = -22.137661617334306
+- my method of measuring Tq and Tw here becomes inaccurate because the queue grows to infinity
+
+Below is a few lines of the schedule as it changes throughout time (I only included a few because it is very long, so I stopped printing it)
+
+[(0.08986181553505607, 'monitor'), (0.09402598292198894, 'birth'), (0.09455332885527964, 'death')]
+[(0.09402598292198894, 'birth'), (0.09455332885527964, 'death'), (0.10033441537628317, 'monitor')]
+[(0.09455332885527964, 'death'), (0.10033441537628317, 'monitor'), (0.15580797376549488, 'birth')]
+[(0.09740332304894345, 'death'), (0.10033441537628317, 'monitor'), (0.15580797376549488, 'birth')]
+[(0.10033441537628317, 'monitor'), (0.10242934542422713, 'death'), (0.15580797376549488, 'birth')]
+[(0.10242934542422713, 'death'), (0.1101906595802109, 'monitor'), (0.15580797376549488, 'birth')]
+[(0.1064696276981176, 'death'), (0.1101906595802109, 'monitor'), (0.15580797376549488, 'birth')]
+[(0.1101906595802109, 'monitor'), (0.11935746986735046, 'death'), (0.15580797376549488, 'birth')]
+[(0.11034477223149863, 'monitor'), (0.11935746986735046, 'death'), (0.15580797376549488, 'birth')]
+[(0.11827008232932436, 'monitor'), (0.11935746986735046, 'death'), (0.15580797376549488, 'birth')]
+[(0.11935746986735046, 'death'), (0.11985590619057986, 'monitor'), (0.15580797376549488, 'birth')]
+[(0.11985590619057986, 'monitor'), (0.12044748613612144, 'death'), (0.15580797376549488, 'birth')]
+
+
+Instructions for running my code:
+
+This is a python program. Change the variables simTime (to the desired simulation time), l (to the desired lambda), and ts.
+run the code and call the function main(), which is the controller. This will print the summary results. 
+Uncommenting the print statement in the while loop causes the program to continuously print the schedule whenever an event is fetched.
